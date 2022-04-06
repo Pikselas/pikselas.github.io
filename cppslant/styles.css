@@ -32,7 +32,7 @@ body
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     left:5%;
-    box-shadow: 0px 0px 10px #060109;
+    /* box-shadow: 0px 0px 5px #060109; */
     background-color: #5fadff3b;
 }
 .Contents div:nth-child(1)
