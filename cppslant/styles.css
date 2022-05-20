@@ -30,18 +30,19 @@ body
     position: absolute;
     left: 10%;
     top: calc(15% + 5px);
-    border-left: 5px solid rgb(196, 110, 255);
-    border-right: 5px solid rgb(196, 110, 255);
+    border-right: 5px solid rgb(10, 255, 247);
+    border-left: 5px solid rgb(10, 255, 247);
     border-radius: 30px;
-    background-color: #00060b12;
+    background-color: #00060b6b;
     overflow-y: scroll;
     scrollbar-width: none;
     text-align: center;
   }
   .ItemTip , .ItemTrick
   {
-    position: relative;
-    width: 400px;
+    transition: all .2s;
+    position : relative;
+    width: 350px;
     height: 250px;
     border-radius: 20px;
     display: inline-block;
@@ -51,9 +52,9 @@ body
   }
 .ItemTip
 {
-    background: -webkit-linear-gradient(-45deg , rgba(123, 38, 184, 0.482) 20%, rgba(125, 74, 255, 0.548) 90%);
+    background: -webkit-linear-gradient(-45deg , rgb(70, 7, 244) 20%, rgb(125, 74, 255) 90%);
 }
 .ItemTrick
 {
-    background: -webkit-linear-gradient(-45deg , rgba(7, 244, 212, 0.579) 20%, rgba(125, 74, 255, 0.503) 90%);
+    background: -webkit-linear-gradient(-45deg , rgb(145, 24, 220) 20%, rgb(250, 88, 234) 90%);
 }
