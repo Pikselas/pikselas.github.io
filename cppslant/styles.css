@@ -34,4 +34,26 @@ body
     border-right: 5px solid rgb(196, 110, 255);
     border-radius: 30px;
     background-color: #00060b12;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    text-align: center;
   }
+  .ItemTip , .ItemTrick
+  {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 2%;
+    box-shadow: 1px 1px 5px black;
+  }
+.ItemTip
+{
+    background: -webkit-linear-gradient(-45deg , rgba(123, 38, 184, 0.482) 20%, rgba(125, 74, 255, 0.548) 90%);
+}
+.ItemTrick
+{
+    background: -webkit-linear-gradient(-45deg , rgba(7, 244, 212, 0.579) 20%, rgba(125, 74, 255, 0.503) 90%);
+}
