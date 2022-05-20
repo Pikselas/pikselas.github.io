@@ -25,33 +25,13 @@ body
 }
 .Contents
 {
-    width:90%;
-    height:85%;
+    width: 80%;
+    height: 75%;
     position: absolute;
-    top: calc(10% + 5px);
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    left:5%;
-    border: 5px solid transparent;
-    border-image: linear-gradient(45deg, rgb(189, 10, 168) 30% , blueviolet 50%);
-    border-image-slice: 1;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-.Contents div:nth-child(1)
-{
-    position: absolute;
-    top: 0%;
-    width: 100%;
-    height: 60px;
-    border-bottom: 5px solid transparent;
-    border-image: linear-gradient(45deg, rgb(189, 10, 168) , blueviolet 40%);
-    border-image-slice: 1;
-}
-.Contents div:nth-child(2)
-{
-    position: absolute;
-    top:60px;
-    height: calc(100% - 60px);
-    width: 100%;
-}
+    left: 10%;
+    top: calc(15% + 5px);
+    border-left: 5px solid rgb(196, 110, 255);
+    border-right: 5px solid rgb(196, 110, 255);
+    border-radius: 30px;
+    background-color: #00060b12;
+  }
