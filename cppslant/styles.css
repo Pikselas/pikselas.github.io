@@ -25,38 +25,53 @@ body
 }
 .Contents
 {
-    width: 80%;
-    height: 75%;
+    width: 90%;
+    height: 85%;
     position: absolute;
-    left: 10%;
-    top: calc(15% + 5px);
-    border-right: 5px solid rgb(10, 255, 247);
-    border-left: 5px solid rgb(10, 255, 247);
+    left: 5%;
+    top: calc(10% + 5px);
+    border-right: 5px solid rgb(2, 255, 137);
+    border-left: 5px solid rgb(2, 255, 137);
     border-radius: 0px;
     background-color: #00060b6b;
     overflow-y: scroll;
     scrollbar-width: none;
     text-align: center;
+    /* box-shadow: 2px 0px 5px 3px rgba(141, 44, 231, 0.97); */
   }
   .ItemTip , .ItemTrick
   {
     transition: all .2s;
     position : relative;
-    width: 350px;
-    height: 250px;
+    max-width: 350px;
+    max-height: 250px;
     border-radius: 20px;
+    width:90%;
+    height:80%;
     display: inline-block;
     margin-top: 2%;
     margin-left: 2%;
     /* box-shadow: 1px 1px 5px black; */
+    cursor: pointer;
   }
 .ItemTip
 {
     /* background :-webkit-linear-gradient(-90deg , #29de92 1%, rgb(125, 74, 255) 90%); */
-    border: 3px solid rgb(78, 255, 78);
+    border: 3px solid rgba(255, 48, 220, 0.768);
 }
 .ItemTrick
 {
     /* background: -webkit-linear-gradient(-45deg , rgb(145, 24, 220) 20%, rgb(250, 88, 234) 90%); */
+    border: 3px solid rgba(170, 79, 255, 0.799);
+}
+
+.ItemTip:hover
+{
+    border: 3px solid rgb(255, 48, 220);
+    background-color: rgba(0, 0, 0, 0.236);
+}
+.ItemTrick:hover
+{
     border: 3px solid rgb(170, 79, 255);
+    background-color: rgba(0, 0, 0, 0.236);
 }
