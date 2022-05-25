@@ -5,7 +5,7 @@
 
 body
 {
-   background-image: linear-gradient(-45deg,#2a0b8edb 5%, rgb(52, 22, 97) 90%);
+   background-image: linear-gradient(-45deg,#000 5%, rgb(139, 51, 198) 90%);
    background-repeat: no-repeat;
    background-attachment: fixed;
 }
@@ -32,7 +32,7 @@ body
     top: calc(15% + 5px);
     border-right: 5px solid rgb(10, 255, 247);
     border-left: 5px solid rgb(10, 255, 247);
-    border-radius: 30px;
+    border-radius: 0px;
     background-color: #00060b6b;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -48,13 +48,15 @@ body
     display: inline-block;
     margin-top: 2%;
     margin-left: 2%;
-    box-shadow: 1px 1px 5px black;
+    /* box-shadow: 1px 1px 5px black; */
   }
 .ItemTip
 {
-    background: -webkit-linear-gradient(-45deg , rgb(70, 7, 244) 20%, rgb(125, 74, 255) 90%);
+    /* background :-webkit-linear-gradient(-90deg , #29de92 1%, rgb(125, 74, 255) 90%); */
+    border: 3px solid rgb(78, 255, 78);
 }
 .ItemTrick
 {
-    background: -webkit-linear-gradient(-45deg , rgb(145, 24, 220) 20%, rgb(250, 88, 234) 90%);
+    /* background: -webkit-linear-gradient(-45deg , rgb(145, 24, 220) 20%, rgb(250, 88, 234) 90%); */
+    border: 3px solid rgb(170, 79, 255);
 }
