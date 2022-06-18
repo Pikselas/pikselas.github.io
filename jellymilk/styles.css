@@ -1,0 +1,51 @@
+body
+{
+    background-color: rgb(64, 1, 87);
+}
+.Banner
+{
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background: -webkit-linear-gradient(-45deg , rgb(164, 9, 167) 20%, rgb(125, 74, 255) 90%);
+}
+.Banner div
+{
+    display: inline;
+}
+.Banner div:nth-child(1)
+{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: larger;
+    color: cornsilk;
+    position: relative;
+    left: 1%;
+    top: 5px;
+}
+
+#TypesContainer
+{
+    max-height: max-content;
+    max-width: max-content;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    width: 50%;
+    height: 50%;
+}
+#TypesContainer button
+{
+    width: 200px;
+    height: 100px;
+    font-size: large;
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 2px;
+    background-color: rgba(246, 66, 255, 0.219);
+    border: 2px solid rgb(246, 66, 255);
+    border-top-left-radius: 10px;
+}
