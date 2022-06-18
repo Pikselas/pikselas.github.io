@@ -45,7 +45,27 @@ body
     font-weight: 300;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 2px;
-    background-color: rgba(246, 66, 255, 0.219);
-    border: 2px solid rgb(246, 66, 255);
-    border-top-left-radius: 10px;
+    background-color: rgba(246, 66, 255, 0);
+    border: 3px solid rgb(0, 123, 255);
+    color: rgba(255, 255, 255, 0.911);
+    cursor: pointer;
+    transition: all .2s;
+}
+#TypesContainer button:hover
+{
+    background-color: rgba(246, 66, 255, 0.449);
+}
+
+#TypesContainer button:nth-child(1)
+{
+    border-top-left-radius: 65px;
+    border-bottom-left-radius: 15px;
+    border-color: rgb(27, 255, 133);
+}
+
+#TypesContainer button:nth-last-child(1)
+{
+    border-top-right-radius: 65px;
+    border-bottom-right-radius: 15px;
+    border-color: rgb(27, 255, 133);
 }
