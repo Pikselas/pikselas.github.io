@@ -13,7 +13,8 @@ body
 {
     max-width: fit-content;
     height: 10%;
-    position: absolute;
+    position: fixed;
+    top: 0%;
     font-weight: 700;
     font-family: "Duplex";
     font-size: 60px;
@@ -32,7 +33,7 @@ body
     top: calc(10% + 5px);
     border-right: 5px solid rgb(2, 255, 137);
     border-left: 5px solid rgb(2, 255, 137);
-    border-radius: 0px;
+    border-radius: 10px;
     background-color: #00060b6b;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -74,4 +75,35 @@ body
 {
     border: 3px solid rgb(170, 79, 255);
     background-color: rgba(0, 0, 0, 0.236);
+}
+
+.Tip
+{
+    width: 50%;
+    height:85%;
+    position: fixed;
+    background:-webkit-linear-gradient(-90deg , #cf2ef8 1%, rgb(125, 74, 255) 90%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+}
+.Tip h1
+{
+    color: #30119fd7;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+.Tip div
+{
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    border-top: 5px solid rgba(255, 255, 255, 0.916);
+    position: absolute;
+    left: 10%;
+    background:-webkit-linear-gradient(-90deg , #29666a40 1%, rgba(125, 74, 255, 0.229) 90%);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    text-align:left;
+
 }

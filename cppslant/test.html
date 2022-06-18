@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Tip
+        {
+            width: 50%;
+            height:85%;
+            position: fixed;
+            background:-webkit-linear-gradient(-90deg , #cf2ef8 1%, rgb(125, 74, 255) 90%);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            text-align: center;
+        }
+        .Tip h1
+        {
+            color: #30119fd7;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .Tip div
+        {
+            width: 80%;
+            height: 80%;
+            border-radius: 10px;
+            border-top: 5px solid rgba(255, 255, 255, 0.916);
+            position: absolute;
+            left: 10%;
+            background:-webkit-linear-gradient(-90deg , #29666a40 1%, rgba(125, 74, 255, 0.229) 90%);
+            overflow-y: scroll;
+            scrollbar-width: none;
+            text-align:left;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="Tip">
+        <h1>Title</h1>
+        <div>
+            <p>This Is Explanation 1  This Is Explanation 1 </p>
+            <p>This Is Explanation 1</p>
+            <pre>
+                #include <iostream>
+                int main()
+                {
+                    return 0;
+                }
+            <pre>
+        </div>
+    </div>
+</body>
+</html>
