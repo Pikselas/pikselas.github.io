@@ -92,3 +92,35 @@ body
     background: -webkit-linear-gradient(-45deg , rgba(29, 255, 101, 0.6) 20%, rgb(129, 82, 248) 90%);
     box-shadow: 0px 0px 15px 2px rgb(10, 255, 243);
 }
+#ModelsContainer
+{
+    position:fixed;
+    height: calc(100% - 30px);
+    width:100%;
+    left: 0%;
+    top: 30px;
+    background-color: black;
+}
+#ModelsContainer .CloseButtonContainer
+{
+    width: 100%;
+    height:30px;
+    text-align: end;
+}
+#ModelsContainer .CloseButtonContainer button
+{
+    width: 30px;
+    height: 30px;
+    color: rgba(45, 238, 232, 0.845);
+    border: none;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: large;
+    background-color: rgb(47, 45, 48);
+    cursor: pointer;
+}
+
+#ModelsContainer .CloseButtonContainer button:hover
+{
+    color: rgb(45, 238, 231);
+}

@@ -1,5 +1,4 @@
-function GetModels(modelType)
+function ToggleContainer()
 {
-    let prms = await fetch("data/models.json");
-    return prms.json();
+    document.getElementById("ModelsContainer").hidden ^= 1;
 }
