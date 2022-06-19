@@ -16,7 +16,7 @@ function CreateModelPanel(name)
 {
     let panel = document.createElement("div");
     let pc = document.createElement("img");
-    pc.src = "profile_pic/" + name + ".png";
+    pc.src = "profile_pics/" + name + ".png";
     let title = document.createElement("h2");
     title.innerHTML = name;
     panel.appendChild(pc);
