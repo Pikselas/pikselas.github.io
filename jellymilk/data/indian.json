@@ -1,4 +1,3 @@
 {
-    "name1" : "pic",
-    "name2" : "pic"
+    "models" : ["stuart"]
 }
