@@ -73,7 +73,7 @@ function ShowModels(modelType)
                     res.json().then((details)=>{
                         let panel = CreateDetailsPanel(details["description"] , details["links"]);
                         document.body.appendChild(panel);
-                        panel.style.left = (document.body.offsetWidth / 2) + (panel.offsetWidth / 2) + "px";
+                        panel.style.left = (document.body.offsetWidth / 2) - (panel.offsetWidth / 2) + "px";
                         panel.style.top = "45px";
                     })
                 });
