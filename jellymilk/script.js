@@ -70,7 +70,7 @@ function ShowModels(modelType)
 
                 fetch(`data/models/${model}.json`).then((res)=>{
                     res.json().then((details)=>{
-                        Modcon.appendChild(CreateDetailsPanel(details["description"] , details["links"]));
+                        document.body.appendChild(CreateDetailsPanel(details["description"] , details["links"]));
                     })
                 });
 
