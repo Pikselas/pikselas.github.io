@@ -1,3 +1,4 @@
+
 function ToggleContainer()
 {
     document.getElementById("ModelsContainer").hidden ^= 1;
@@ -70,7 +71,10 @@ function ShowModels(modelType)
 
                 fetch(`data/models/${model}.json`).then((res)=>{
                     res.json().then((details)=>{
-                        document.body.appendChild(CreateDetailsPanel(details["description"] , details["links"]));
+                        let panel = CreateDetailsPanel(details["description"] , details["links"]);
+                        document.body.appendChild(panel);
+                        panel.style.left = (document.body.offsetWidth / 2) + (panel.offsetWidth / 2) + "px";
+                        panel.style.top = "45px";
                     })
                 });
 
