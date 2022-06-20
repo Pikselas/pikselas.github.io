@@ -12,6 +12,41 @@ async function GetModels(modelType)
     }
 }
 
+function CreateDetailsPanel(desc , links)
+{
+   let panel = document.createElement("div");
+   panel.className = "modelDetails";  
+   
+   let panelCloseArea = document.createElement("div");
+   let panelCloseButton = document.createElement("button");
+   panelCloseButton.innerHTML = "X";
+   panelCloseArea.className = "CloseButtonContainer";
+   panelCloseArea.appendChild(panelCloseButton);
+
+   panelCloseButton.onclick = () => {panel.parentElement.removeChild(panel)};
+
+   panel.appendChild(panelCloseArea);
+
+   let container = document.createElement("div");
+   container.className = "Container";
+
+   container.innerHTML += desc + "<br/><br/><br/>";
+
+   links.forEach((link)=>{
+
+    let lnk = document.createElement("a");
+    lnk.href = link;
+    lnk.target = "_blank";
+    lnk.innerHTML = link;
+    container.appendChild(lnk);
+    container.innerHTML += "<br/>";
+
+   });
+
+   panel.appendChild(container);
+   return panel;
+}
+
 function CreateModelPanel(name)
 {
     let panel = document.createElement("div");
@@ -30,7 +65,17 @@ function ShowModels(modelType)
     Modcon.innerHTML = "";
     GetModels(modelType).then((modelsJson)=>{
         modelsJson["models"].forEach(model => {
-            Modcon.appendChild(CreateModelPanel(model));            
+            let modelPanel = CreateModelPanel(model);
+            modelPanel.onclick = ()=>{
+
+                fetch(`data/models/${model}.json`).then((res)=>{
+                    res.json().then((details)=>{
+                        Modcon.appendChild(CreateDetailsPanel(details["description"] , details["links"]));
+                    })
+                });
+
+            };
+            Modcon.appendChild(modelPanel);            
         });
     });
 }
