@@ -1,4 +1,3 @@
-
 function ToggleContainer()
 {
     document.getElementById("ModelsContainer").hidden ^= 1;
@@ -6,7 +5,7 @@ function ToggleContainer()
 
 async function GetModels(modelType)
 {
-    let res = await fetch(`data/${modelType}.json`);
+    let res = await fetch(`data/catagories/${modelType}.json`);
     if(res.ok)
     {
         return await res.json();
@@ -80,6 +79,23 @@ function ShowModels(modelType)
 
             };
             Modcon.appendChild(modelPanel);            
+        });
+    });
+}
+
+document.body.onload = ()=>{
+
+    fetch("data/catagories.json").then((res)=>{
+        res.json().then((data)=>{
+            data["catagories"].forEach((catagory)=>{
+                let button = document.createElement("button");
+                button.innerHTML = catagory;
+                button.onclick = ()=>{
+                    ToggleContainer();
+                    ShowModels(catagory);
+                }
+                document.getElementById("TypesContainer").appendChild(button);
+            })
         });
     });
 }

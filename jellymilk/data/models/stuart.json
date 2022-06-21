@@ -1,4 +1,4 @@
 {
-    "description" : "its a minion",
-    "links" : ["www.google.com"]
+    "descripton" : "It's a minion",
+    "links"      : ["https://www.google.com"]
 }
