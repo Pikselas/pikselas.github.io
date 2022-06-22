@@ -36,12 +36,8 @@ body
     height: 85%;
     top: 10%;
     left: 15%;
-    background-color: #350c5796;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 1px black;
     overflow-y: scroll;
     scrollbar-width: none;
-    /* display: flex; */
     text-align: center;
 }
 #TypesContainer button
@@ -50,7 +46,7 @@ body
     width: 200px;
     height: 200px;
     align-self: center;
-    background: -webkit-linear-gradient(45deg,#b700ffa0 30%, rgba(221, 0, 255, 0.764) 90%);
+    background: linear-gradient(0.30turn, rgba(28, 255, 127, 0.866), rgba(137, 43, 226, 0.762),rgba(43, 205, 238, 0.893));
     border: 3px solid rgb(175, 9, 225);
     border-radius: 10px;
     color: white;
@@ -62,7 +58,7 @@ body
 }
 #TypesContainer button:hover
 {
-    background: -webkit-linear-gradient(45deg,#b700ffc7 30%, rgba(221, 0, 255, 0.873) 90%);
+    background: linear-gradient(0.30turn, rgb(28, 255, 126), rgba(137, 43, 226, 0.975),rgb(43, 205, 238));
     color: rgba(255, 255, 255, 0.81);
     box-shadow: 0px 0px 10px 3px rgba(2, 2, 2, 0.611);
 }
