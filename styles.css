@@ -5,6 +5,7 @@
     display: inline-block;
     margin: 1px;
     position: absolute;
+    transition: all .5s;
 }
 .Hex div:nth-child(1)
 {
@@ -91,5 +92,19 @@
 
 .Hex:hover
 {
+    transform: scale(1.5);
+    z-index : 100;
+}
 
+.Hex:hover div:nth-child(1)
+{
+    border-bottom-color: aquamarine;
+}
+.Hex:hover div:nth-child(2)
+{
+    background-color: aquamarine;
+}
+.Hex:hover div:nth-child(3)
+{
+    border-top-color: aquamarine;
 }
