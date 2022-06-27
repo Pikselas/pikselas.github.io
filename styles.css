@@ -1,0 +1,65 @@
+.Hex
+{
+    width: max-content;
+    height: max-content;   
+    display: inline-block;
+    display: inline-block;
+}
+.Hex div:nth-child(1)
+{
+    border-bottom: 50px solid #6C6;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+}
+
+.Hex div:nth-child(2)
+{
+    width: 120px;
+    height: 60px;
+    background-color: #6C6;
+}
+
+.Hex div:nth-child(3)
+{
+    border-top: 50px solid #6C6;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+}
+
+.HalfHexRightSided
+{
+    width: max-content;
+    height: max-content;   
+    display: inline-block;
+    display: inline-block;
+}
+
+.HalfHexRightSided div:nth-child(1)
+{
+    border-bottom: 50px solid #6C6;
+    border-right: 60px solid transparent;
+}
+
+.HalfHexRightSided div:nth-child(2)
+{
+    width: 60px;
+    height: 60px;
+    background-color: #6C6;
+}
+
+.HalfHexRightSided div:nth-child(3)
+{
+    border-top: 50px solid #6C6;
+    /* border-left: 60px solid transparent; */
+    border-right: 60px solid transparent;
+}
+
+
+.HexRow
+{
+    margin-bottom: -50px;
+}
+.HexRow.even
+{
+    margin-left: 62px;
+}
