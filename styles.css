@@ -3,7 +3,8 @@
     width: max-content;
     height: max-content;   
     display: inline-block;
-    display: inline-block;
+    margin: 1px;
+    position: absolute;
 }
 .Hex div:nth-child(1)
 {
@@ -31,7 +32,7 @@
     width: max-content;
     height: max-content;   
     display: inline-block;
-    display: inline-block;
+    position:absolute;
 }
 
 .HalfHexRightSided div:nth-child(1)
@@ -50,16 +51,45 @@
 .HalfHexRightSided div:nth-child(3)
 {
     border-top: 50px solid #6C6;
-    /* border-left: 60px solid transparent; */
     border-right: 60px solid transparent;
 }
 
-
-.HexRow
+.HalfHexLeftSided
 {
-    margin-bottom: -50px;
+    width: max-content;
+    height: max-content;   
+    display: inline-block;
+    position: absolute;
 }
-.HexRow.even
+.HalfHexLeftSided div:nth-child(1)
 {
-    margin-left: 62px;
+    border-bottom: 50px solid #6C6;
+    border-left: 60px solid transparent;
+}
+
+.HalfHexLeftSided div:nth-child(2)
+{
+    width: 60px;
+    height: 60px;
+    background-color: #6C6;
+}
+
+.HalfHexLeftSided div:nth-child(3)
+{
+    border-top: 50px solid #6C6;
+    border-left: 60px solid transparent;
+}
+
+.HexRowOdd
+{
+    position: absolute;
+}
+.HexRowEven
+{
+    position: absolute;
+}
+
+.Hex:hover
+{
+
 }
