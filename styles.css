@@ -1,3 +1,8 @@
+body
+{
+    overflow: hidden;
+}
+
 .Hex
 {
     width: max-content;
@@ -92,7 +97,7 @@
 
 .Hex:hover
 {
-    transform: scale(1.5);
+    transform: scale(1.2);
     z-index : 100;
 }
 

@@ -97,3 +97,14 @@ function CreateHexPanel(row_count , column_count , hex_size)
     }
     return Panel
 }
+
+document.body.onload = ()=>{
+
+    let Panel = CreateHexPanel(Math.round(document.body.scrollWidth / 145) + 3, 
+    Math.round(document.documentElement.scrollHeight / 145) + 3 
+, 145);
+    Panel.style.position = "absolute";
+    Panel.style.left = "0px";
+    Panel.style.top = "-70px";
+    document.body.appendChild(Panel);
+}
