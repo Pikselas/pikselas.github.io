@@ -12,6 +12,7 @@ body
     position: absolute;
     transition: all .5s;
 }
+
 .Hex div:nth-child(1)
 {
     border-bottom: 50px solid #6C6;
@@ -98,7 +99,7 @@ body
 .Hex:hover
 {
     transform: scale(1.2);
-    z-index : 100;
+    z-index : 10;
 }
 
 .Hex:hover div:nth-child(1)
@@ -113,3 +114,53 @@ body
 {
     border-top-color: aquamarine;
 }
+
+.HexButton
+{
+    position: fixed;
+    left: calc(50% - 150px);
+    top: 15%;
+    z-index: 100;
+}
+.HexButton div:nth-child(1)
+{
+    transition: all .2s;
+    position: absolute;
+    top: 4px;
+    width: 300px;
+    height: 300px;
+    background-color: #6C6;
+    transform: rotateZ(45deg);
+    border-radius: 10px;
+    border: 1px solid black;
+    /* box-shadow: 0px 0px 10px  black; */
+}
+
+.HexButton div:nth-child(3)
+{
+    transition: all .2s;
+    position: absolute;
+    width: 426px;
+    height: 213px;
+    top: 150px;
+    background-color: #6C6;
+    left: -63px;
+    border-radius: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    /* box-shadow: 0px 0px 10px  black; */
+}
+.HexButton div:nth-child(2)
+{
+    transition: all .2s;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 210px;
+    background-color: #6C6;
+    transform: rotateZ(45deg);
+    border-radius: 10px;
+    border: 1px solid black;
+    /* box-shadow: 0px 0px 10px  black; */
+}
+
