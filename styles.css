@@ -1,6 +1,7 @@
 body
 {
     overflow: hidden;
+    background:linear-gradient(90deg , cornflowerblue 35%, chartreuse 90%);
 }
 
 .Hex
@@ -10,12 +11,12 @@ body
     display: inline-block;
     margin: 1px;
     position: absolute;
-    transition: all .5s;
+    transition: all .4s;
 }
 
 .Hex div:nth-child(1)
 {
-    border-bottom: 50px solid #6C6;
+    border-bottom: 50px solid blueviolet;
     border-left: 60px solid transparent;
     border-right: 60px solid transparent;
 }
@@ -24,12 +25,12 @@ body
 {
     width: 120px;
     height: 60px;
-    background-color: #6C6;
+    background-color: blueviolet;
 }
 
 .Hex div:nth-child(3)
 {
-    border-top: 50px solid #6C6;
+    border-top: 50px solid blueviolet;
     border-left: 60px solid transparent;
     border-right: 60px solid transparent;
 }
@@ -44,7 +45,7 @@ body
 
 .HalfHexRightSided div:nth-child(1)
 {
-    border-bottom: 50px solid #6C6;
+    border-bottom: 50px solid blueviolet;
     border-right: 60px solid transparent;
 }
 
@@ -52,12 +53,12 @@ body
 {
     width: 60px;
     height: 60px;
-    background-color: #6C6;
+    background-color: blueviolet;
 }
 
 .HalfHexRightSided div:nth-child(3)
 {
-    border-top: 50px solid #6C6;
+    border-top: 50px solid blueviolet;
     border-right: 60px solid transparent;
 }
 
@@ -70,7 +71,7 @@ body
 }
 .HalfHexLeftSided div:nth-child(1)
 {
-    border-bottom: 50px solid #6C6;
+    border-bottom: 50px solid blueviolet;
     border-left: 60px solid transparent;
 }
 
@@ -78,12 +79,12 @@ body
 {
     width: 60px;
     height: 60px;
-    background-color: #6C6;
+    background-color: blueviolet;
 }
 
 .HalfHexLeftSided div:nth-child(3)
 {
-    border-top: 50px solid #6C6;
+    border-top: 50px solid blueviolet;
     border-left: 60px solid transparent;
 }
 
@@ -104,63 +105,13 @@ body
 
 .Hex:hover div:nth-child(1)
 {
-    border-bottom-color: aquamarine;
+    border-bottom-color: rgb(204, 35, 255);
 }
 .Hex:hover div:nth-child(2)
 {
-    background-color: aquamarine;
+    background-color: rgb(204, 35, 255);
 }
 .Hex:hover div:nth-child(3)
 {
-    border-top-color: aquamarine;
+    border-top-color: rgb(204, 35, 255);
 }
-
-.HexButton
-{
-    position: fixed;
-    left: calc(50% - 150px);
-    top: 15%;
-    z-index: 100;
-}
-.HexButton div:nth-child(1)
-{
-    transition: all .2s;
-    position: absolute;
-    top: 4px;
-    width: 300px;
-    height: 300px;
-    background-color: #6C6;
-    transform: rotateZ(45deg);
-    border-radius: 10px;
-    border: 1px solid black;
-    /* box-shadow: 0px 0px 10px  black; */
-}
-
-.HexButton div:nth-child(3)
-{
-    transition: all .2s;
-    position: absolute;
-    width: 426px;
-    height: 213px;
-    top: 150px;
-    background-color: #6C6;
-    left: -63px;
-    border-radius: 10px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    /* box-shadow: 0px 0px 10px  black; */
-}
-.HexButton div:nth-child(2)
-{
-    transition: all .2s;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 210px;
-    background-color: #6C6;
-    transform: rotateZ(45deg);
-    border-radius: 10px;
-    border: 1px solid black;
-    /* box-shadow: 0px 0px 10px  black; */
-}
-

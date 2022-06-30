@@ -21,6 +21,7 @@ function CreateHex(width , height)
     Parent.appendChild(Top);
     Parent.appendChild(Middle);
     Parent.appendChild(Bottom);
+
     return Parent;
 }
 
@@ -95,7 +96,18 @@ function CreateHexPanel(row_count , column_count , hex_size)
         tracker ^= 1;
         pos += PosBy;
     }
-    return Panel
+    return Panel;
+}
+
+function ScaleHexPanelElem(Panel , ScaleFactor)
+{
+    for(let i = 0 ; i< Panel.children.length ; ++i)
+    {
+        for(let j = 0 ; j < Panel.children[i].children.length ; ++j)
+        {
+            Panel.children[i].children[j].style.transform = `scale(${ScaleFactor})`;
+        }
+    }
 }
 
 document.body.onload = ()=>{
@@ -107,4 +119,5 @@ document.body.onload = ()=>{
     Panel.style.left = "0px";
     Panel.style.top = "-70px";
     document.body.appendChild(Panel);
+
 }
