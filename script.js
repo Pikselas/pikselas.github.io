@@ -110,14 +110,33 @@ function ScaleHexPanelElem(Panel , ScaleFactor)
     }
 }
 
-document.body.onload = ()=>{
+function CreateHexFlower()
+{
+    let Flower = document.createElement("div");
+    
+    Flower.className = "HexFlower";
 
-    let Panel = CreateHexPanel(Math.round(document.body.scrollWidth / 145) + 3, 
-    Math.round(document.documentElement.scrollHeight / 145) + 3 
-, 145);
-    Panel.style.position = "absolute";
-    Panel.style.left = "0px";
-    Panel.style.top = "-70px";
-    document.body.appendChild(Panel);
+
+    let FirstRow = CreateHexRowOdd(150 , 150 , 2);
+    let SecondRow = CreateHexRowOdd(150 , 150 , 3);
+    let ThirdRow = CreateHexRowOdd(150 , 150 , 2);
+
+    Flower.appendChild(FirstRow);
+    Flower.appendChild(SecondRow);
+    Flower.appendChild(ThirdRow);
+
+    document.body.appendChild(Flower);
 
 }
+
+// document.body.onload = ()=>{
+
+//     let Panel = CreateHexPanel(Math.round(document.body.scrollWidth / 145) + 3, 
+//     Math.round(document.documentElement.scrollHeight / 145) + 3 
+// , 145);
+//     Panel.style.position = "absolute";
+//     Panel.style.left = "0px";
+//     Panel.style.top = "-70px";
+//     document.body.appendChild(Panel);
+
+// }
