@@ -125,18 +125,63 @@ function CreateHexFlower()
     Flower.appendChild(SecondRow);
     Flower.appendChild(ThirdRow);
 
-    document.body.appendChild(Flower);
+    return Flower;
 
 }
 
-// document.body.onload = ()=>{
+function CreateHexCard()
+{
+    let Panel = document.createElement("div");
+    Panel.className = "HexCard";
 
-//     let Panel = CreateHexPanel(Math.round(document.body.scrollWidth / 145) + 3, 
-//     Math.round(document.documentElement.scrollHeight / 145) + 3 
-// , 145);
-//     Panel.style.position = "absolute";
-//     Panel.style.left = "0px";
-//     Panel.style.top = "-70px";
-//     document.body.appendChild(Panel);
+    let TopHex = document.createElement("div");
 
-// }
+    TopHex.className = "TopHex";
+
+    TopHex.appendChild(CreateHexRowOdd(100 , 100 , 1));
+    TopHex.appendChild(CreateHexRowOdd(100 , 100 , 2));
+
+    Panel.appendChild(TopHex);
+
+    let BottomHex = document.createElement("div");
+
+    BottomHex.className = "BottomHex";
+
+    BottomHex.appendChild(CreateHexRowOdd(100 , 100 , 1));
+    BottomHex.appendChild(CreateHexRowOdd(100 , 100 , 2));
+
+    Panel.appendChild(BottomHex);
+
+    document.body.appendChild(Panel);
+}
+
+document.body.onload = ()=>{
+
+    let Panel = CreateHexPanel(Math.round(document.body.scrollWidth / 145) + 3, 
+    Math.round(document.documentElement.scrollHeight / 145) + 3 
+, 145);
+    Panel.style.position = "absolute";
+    Panel.style.left = "0px";
+    Panel.style.top = "-70px";
+
+    Panel.id = "BackgroundHexPanel";
+
+    document.body.appendChild(Panel);
+
+    let Flower = CreateHexFlower();
+
+    Flower.onclick = ()=>{
+
+        let panel = document.getElementById("BackgroundHexPanel");
+        ScaleHexPanelElem(document.getElementById("BackgroundHexPanel") , 0);
+        Flower.style.opacity = "0";
+        setTimeout(()=>{
+            panel.parentElement.removeChild(panel);
+            Flower.parentElement.removeChild(Flower);
+        } , 900);
+    }
+    document.body.appendChild(Flower);
+
+    //CreateHexCard();
+
+}
