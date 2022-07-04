@@ -160,10 +160,6 @@ document.body.onload = ()=>{
     let Panel = CreateHexPanel(Math.round(document.body.scrollWidth / 145) + 3, 
     Math.round(document.documentElement.scrollHeight / 145) + 3 
 , 145);
-    Panel.style.position = "absolute";
-    Panel.style.left = "0px";
-    Panel.style.top = "-70px";
-
     Panel.id = "BackgroundHexPanel";
 
     document.body.appendChild(Panel);
@@ -173,6 +169,7 @@ document.body.onload = ()=>{
     Flower.onclick = ()=>{
 
         let panel = document.getElementById("BackgroundHexPanel");
+        panel.style.background = "none";
         ScaleHexPanelElem(document.getElementById("BackgroundHexPanel") , 0);
         Flower.style.opacity = "0";
         setTimeout(()=>{
