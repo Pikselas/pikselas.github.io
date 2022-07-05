@@ -1,4 +1,10 @@
 
+function GenerateRandomColor()
+{
+    return `rgba(10 , 10 , ${Math.floor(Math.random() * 255)} , 1)`;
+    //return `rgba(${Math.floor(Math.random() * 100)} , ${Math.floor(Math.random() * 150)} , ${Math.floor(Math.random() * 255)}, ${Math.random().toFixed(2)})`;
+}
+
 function CreateHex(width , height)
 {
     let HalfofHeight = Math.floor(height / 2);
@@ -17,6 +23,10 @@ function CreateHex(width , height)
 
     Middle.style.width = width + "px";
     Middle.style.height = HalfofHeight + "px";
+
+    // let col = GenerateRandomColor();
+
+    // Top.style.borderBottomColor = Bottom.style.borderTopColor = Middle.style.backgroundColor = col;
 
     Parent.appendChild(Top);
     Parent.appendChild(Middle);

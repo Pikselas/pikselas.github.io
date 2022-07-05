@@ -6,8 +6,15 @@
     left: 0px;
     top: -70px;
     overflow: hidden;
-    background:linear-gradient(90deg , cornflowerblue 35%, chartreuse 90%);
+    background: linear-gradient(180deg, rgb(1, 1, 1), #56fff4 , rgb(255, 13, 247));
+    background-size: 200% 200%;
+    animation: backPanel 4s ease-in-out infinite;
 }
+
+@keyframes backPanel {
+    0%{background-position:0% 0%}
+    100%{background-position:100% 200%}
+  }
 
 .Hex
 {
