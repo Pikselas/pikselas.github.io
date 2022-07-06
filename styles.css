@@ -1,3 +1,8 @@
+body
+{
+    background-color: #060224;
+}
+
 #BackgroundHexPanel
 {
     width: 100%;
@@ -240,4 +245,46 @@
 {
     top: 78px;
     left: 50px;
+}
+
+.HexCard2
+{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: block;
+    text-align: center;
+    /* overflow: hidden; */
+    /* background-color: #500778a3; */
+    border-radius: 15px;
+    /* box-shadow: 5px 5px 10px black; */
+    margin-top: 50px;
+    left: calc(50% - 250px);
+}
+.HexCard2 .Contents
+{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 25%;
+    text-align: center;
+}
+
+.HexCard2 .Contents h1
+{
+    font-family: monospace;
+    color: white
+}
+
+.HexCard2 .Contents p
+{
+    color: #d0e0df;
+    font-size: medium;
+    font-weight: 600;
+    font-family: fantasy;
+}
+
+.HexCard2 .Contents a
+{
+    color: bisque;
 }

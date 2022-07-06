@@ -1,11 +1,10 @@
 
 function GenerateRandomColor()
 {
-    return `rgba(10 , 10 , ${Math.floor(Math.random() * 255)} , 1)`;
-    //return `rgba(${Math.floor(Math.random() * 100)} , ${Math.floor(Math.random() * 150)} , ${Math.floor(Math.random() * 255)}, ${Math.random().toFixed(2)})`;
+    return `rgba(${Math.floor(Math.random() * 100)} , ${Math.floor(Math.random() * 150)} , ${Math.floor(Math.random() * 255)}, ${Math.random().toFixed(2)})`;
 }
 
-function CreateHex(width , height)
+function CreateHex(width , height , color = null)
 {
     let HalfofHeight = Math.floor(height / 2);
     let Parent = document.createElement("div");
@@ -26,8 +25,10 @@ function CreateHex(width , height)
 
     // let col = GenerateRandomColor();
 
-    // Top.style.borderBottomColor = Bottom.style.borderTopColor = Middle.style.backgroundColor = col;
-
+    if(color)
+    {   
+        Top.style.borderBottomColor = Bottom.style.borderTopColor = Middle.style.backgroundColor = color;
+    }
     Parent.appendChild(Top);
     Parent.appendChild(Middle);
     Parent.appendChild(Bottom);
@@ -165,6 +166,51 @@ function CreateHexCard()
     document.body.appendChild(Panel);
 }
 
+function CreateHexCard2(Title , Desc , Link)
+{
+    let Panel = document.createElement("div");
+
+    Panel.className = "HexCard2";
+
+    let count = Math.round(Math.random() * 10) + 10;
+
+    for(let i = 0 ; i < count ; ++i)
+    {
+        let x = Math.round(Math.random() * 80); 
+        let y = Math.round(Math.random() * 80);
+        let size = Math.round(Math.random() * 100) + 100;
+
+        let color = GenerateRandomColor();
+
+        let Hex = CreateHex(size , size , color);
+
+        Hex.style.top = x + "%";
+        Hex.style.left = y + "%";
+
+        Panel.appendChild(Hex);
+
+    }
+
+    let ContentPanel = document.createElement("div");
+    ContentPanel.className = "Contents";
+
+    let cTitle = document.createElement("h1");
+    cTitle.innerText = Title;
+    let cDesc = document.createElement("p");
+    cDesc.innerText = Desc;
+    let cLink = document.createElement("a");
+    cLink.href = Link;
+    cLink.innerText = "Go";
+
+    ContentPanel.appendChild(cTitle);
+    ContentPanel.appendChild(cDesc);
+    ContentPanel.appendChild(cLink);
+
+    Panel.appendChild(ContentPanel);
+
+    document.body.appendChild(Panel);
+}
+
 document.body.onload = ()=>{
 
     let Panel = CreateHexPanel(Math.round(document.body.scrollWidth / 145) + 3, 
@@ -186,9 +232,16 @@ document.body.onload = ()=>{
             panel.parentElement.removeChild(panel);
             Flower.parentElement.removeChild(Flower);
         } , 900);
+
+        fetch("/script.js").then((res)=>{
+            res.json().then((projects)=>{
+                projects["projects"].forEach((projectdata)=>{
+                    CreateHexCard2(projectdata["name"] , projectdata["desc"] , projectdata["link"]);
+                })
+            })
+        });
+
     }
     document.body.appendChild(Flower);
-
-    //CreateHexCard();
 
 }

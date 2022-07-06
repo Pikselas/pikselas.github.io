@@ -1,0 +1,14 @@
+{
+    "projects" : [
+                {
+                    "name" : "CPPSLANT",
+                    "desc" : "A C++ Cheat-Sheet / Tips & Tricks Site",
+                    "link" : "/cppslant"
+                },
+                {
+                    "name" : "JELLYMILK",
+                    "desc" : "Personal favorite star collections",
+                    "link" : "/jellymilk"
+                }
+              ]
+}
