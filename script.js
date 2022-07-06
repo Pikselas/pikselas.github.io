@@ -233,7 +233,7 @@ document.body.onload = ()=>{
             Flower.parentElement.removeChild(Flower);
         } , 900);
 
-        fetch("/script.js").then((res)=>{
+        fetch("/script.json").then((res)=>{
             res.json().then((projects)=>{
                 projects["projects"].forEach((projectdata)=>{
                     CreateHexCard2(projectdata["name"] , projectdata["desc"] , projectdata["link"]);
