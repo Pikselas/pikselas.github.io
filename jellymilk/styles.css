@@ -1,8 +1,8 @@
 body
 {
     /* background-color: rgb(64, 1, 87); */
-    background-image: url("./background.jpg");
-    background-size:cover;
+    /* background-size:auto; */
+    background:linear-gradient(90deg , rgb(0, 0, 117) , rgb(159, 4, 197));
 }
 .Banner
 {
