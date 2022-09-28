@@ -1,3 +1,6 @@
+
+var BaseURL = "https://raw.githubusercontent.com/Pikselas/jellymilk/master";
+
 function ToggleContainer()
 {
     document.getElementById("ModelsContainer").hidden ^= 1;
@@ -5,7 +8,7 @@ function ToggleContainer()
 
 async function GetModels(modelType)
 {
-    let res = await fetch(`data/catagories/${modelType}.json`);
+    let res = await fetch(`${BaseURL}/data/catagories/${modelType}.json`);
     if(res.ok)
     {
         return await res.json();
@@ -65,7 +68,7 @@ function CreateModelPanel(name)
     let panel = document.createElement("div");
     panel.style.background = `linear-gradient(${Math.floor(Math.random() * 360)}deg, ${randomColorBG()},#020005ee, ${randomColorPB()})`;
     let pc = document.createElement("img");
-    pc.src = "profile_pics/" + name + ".png";
+    pc.src = BaseURL + "/profile_pics/" + name + ".png";
     let title = document.createElement("h2");
     title.innerHTML = name;
     panel.appendChild(pc);
@@ -82,7 +85,7 @@ function ShowModels(modelType)
             let modelPanel = CreateModelPanel(model);
             modelPanel.onclick = ()=>{
 
-                fetch(`data/models/${model}.json`).then((res)=>{
+                fetch(`${BaseURL}/data/models/${model}.json`).then((res)=>{
                     res.json().then((details)=>{
                         let panel = CreateDetailsPanel(details["description"] , details["links"]);
                         document.body.appendChild(panel);
@@ -99,7 +102,7 @@ function ShowModels(modelType)
 
 document.body.onload = ()=>{
 
-    fetch("data/catagories.json").then((res)=>{
+    fetch(BaseURL + "/data/catagories.json").then((res)=>{
         res.json().then((data)=>{
             data["catagories"].forEach((catagory)=>{
                 let button = document.createElement("button");
