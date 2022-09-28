@@ -64,7 +64,6 @@ function CreateModelPanel(name)
 {
     let panel = document.createElement("div");
     panel.style.background = `linear-gradient(${Math.floor(Math.random() * 360)}deg, ${randomColorBG()},#020005ee, ${randomColorPB()})`;
-    console.log(panel.style.background , Lg);
     let pc = document.createElement("img");
     pc.src = "profile_pics/" + name + ".png";
     let title = document.createElement("h2");
