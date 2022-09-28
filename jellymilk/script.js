@@ -47,9 +47,23 @@ function CreateDetailsPanel(desc , links)
    return panel;
 }
 
+//generates random color between blue and green
+function randomColorBG() 
+{
+    let r = 0, g = Math.random() * 255, b = Math.random() * 255;
+    return "rgb(" + r + "," + g + "," + b + ")";
+}
+//generates random color between pink and blue
+function randomColorPB()
+{
+    let r = Math.random() * 255, g = 0, b = Math.random() * 255;
+    return "rgb(" + r + "," + g + "," + b + ")";
+}
+
 function CreateModelPanel(name)
 {
     let panel = document.createElement("div");
+    panel.style.background = `linear-gradient(${Math.floor(Math.random() * 360)}, ${randomColorBG()},#020005ee, ${randomColorPB()})`;
     let pc = document.createElement("img");
     pc.src = "profile_pics/" + name + ".png";
     let title = document.createElement("h2");
