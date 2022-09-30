@@ -8,7 +8,7 @@ function ToggleContainer()
 
 async function GetModels(modelType)
 {
-    let res = await fetch(`${BaseURL}/data/catagories/${modelType}.json`);
+    let res = await fetch(`${BaseURL}/data/categories/${modelType}.json`);
     if(res.ok)
     {
         return await res.json();
@@ -104,12 +104,12 @@ document.body.onload = ()=>{
 
     fetch(BaseURL + "/data/catagories.json").then((res)=>{
         res.json().then((data)=>{
-            data["catagories"].forEach((catagory)=>{
+            data["categories"].forEach((category)=>{
                 let button = document.createElement("button");
-                button.innerHTML = catagory;
+                button.innerHTML = category;
                 button.onclick = ()=>{
                     ToggleContainer();
-                    ShowModels(catagory);
+                    ShowModels(category);
                 }
                 document.getElementById("TypesContainer").appendChild(button);
             })
