@@ -102,7 +102,7 @@ function ShowModels(modelType)
 
 document.body.onload = ()=>{
 
-    fetch(BaseURL + "/data/catagories.json").then((res)=>{
+    fetch(BaseURL + "/data/categories.json").then((res)=>{
         res.json().then((data)=>{
             data["categories"].forEach((category)=>{
                 let button = document.createElement("button");
