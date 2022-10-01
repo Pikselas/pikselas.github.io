@@ -1,9 +1,10 @@
 
 var BaseURL = "https://raw.githubusercontent.com/Pikselas/jellymilk/master";
+var containerPos = 100;
 
 function ToggleContainer()
 {
-    document.getElementById("ModelsContainer").hidden ^= 1;
+    document.getElementById("ModelsContainer").style.top = (containerPos ^= 100) + "%";
 }
 
 async function GetModels(modelType)
