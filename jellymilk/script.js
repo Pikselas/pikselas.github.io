@@ -50,29 +50,30 @@ function CreateDetailsPanel(desc , links)
    return panel;
 }
 
-//generates random color between blue and green
-function randomColorBG() 
-{
-    let r = 0, g = Math.floor(Math.random() * 255), b = Math.floor(Math.random() * 255);
-    return "rgb(" + r + "," + g + "," + b + ")";
-}
-//generates random color between pink and blue
-function randomColorPB()
-{
-    let r = Math.floor(Math.random() * 255), g = 0, b = Math.floor(Math.random() * 255);
-    return "rgb(" + r + "," + g + "," + b + ")";
-}
-
 function CreateModelPanel(name)
 {
     let panel = document.createElement("div");
-    panel.style.background = `linear-gradient(${Math.floor(Math.random() * 360)}deg, ${randomColorBG()},#020005ee, ${randomColorPB()})`;
-    let pc = document.createElement("img");
-    pc.src = BaseURL + "/profile_pics/" + name + ".png";
-    let title = document.createElement("h2");
+    let circle1 = document.createElement("div");
+    let circle2 = document.createElement("div");
+    let imgcontainer = document.createElement("div");
+    let img = document.createElement("img");
+    let titlecontainer = document.createElement("div");
+    let title = document.createElement("h1");
+    img.src = `${BaseURL}/profile_pics/${name}.png`;
+
+    panel.className = "Card";
+    circle1.className = "Circle";
+    circle2.className = "Circle";
+    imgcontainer.className = "ImgCont";
+    titlecontainer.className = "Title";
     title.innerHTML = name;
-    panel.appendChild(pc);
-    panel.appendChild(title);
+    
+    imgcontainer.appendChild(img);
+    titlecontainer.appendChild(title);
+    panel.appendChild(circle1);
+    panel.appendChild(circle2);
+    panel.appendChild(imgcontainer);
+    panel.appendChild(titlecontainer);
     return panel;
 }
 
