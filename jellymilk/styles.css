@@ -9,21 +9,6 @@
         background-image: url("./bg.jpg");
     }
 }
-@keyframes bannerBackgroundMove
-{
-    0%
-    {
-        background-position: 0% 50%;
-    }
-    50%
-    {
-        background-position: 100% 50%;
-    }
-    100%
-    {
-        background-position: 0% 50%;
-    }
-}
 .Banner
 {
     width: 100%;
@@ -31,9 +16,8 @@
     position: fixed;
     top: 0%;
     left: 0%;
-    background: linear-gradient(90deg, rgb(0, 251, 255), rgb(159, 4, 197) , rgb(0, 251, 255));
+    background: linear-gradient(90deg, rgb(31, 0, 50), rgb(7, 0, 61));
     background-size: 200% 100%;
-    animation: bannerBackgroundMove 5s infinite;
 }
 .Banner div
 {
@@ -125,6 +109,7 @@
     height: calc(100% - 30px);
     top:30px;
     overflow-y:scroll;
+    scrollbar-width: none;
     text-align: center;
 }
 
@@ -193,22 +178,22 @@
     font-family: monospace;
     font-size: larger;
 }
-.Card:hover .Circle:nth-child(1)
+.Card:hover .Circle:nth-child(1) , .Card.Mobile .Circle:nth-child(1)
 {
     left: 50px;
     transform: scale(1.5);
 }
-.Card:hover .Circle:nth-child(2)
+.Card:hover .Circle:nth-child(2) , .Card.Mobile .Circle:nth-child(2)
 {
     right: -55px;
     transform: scale(0.9);
 }
-.Card:hover .ImgCont
+.Card:hover .ImgCont , .Card.Mobile .ImgCont
 {
     transform: scale(0.8);
     top: -115%;
 }
-.Card:hover .Title
+.Card:hover .Title , .Card.Mobile .Title
 {
     opacity: 1;
     top: -100%;

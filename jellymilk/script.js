@@ -1,10 +1,12 @@
 
-var BaseURL = "https://raw.githubusercontent.com/Pikselas/jellymilk/master";
+const BaseURL = "https://raw.githubusercontent.com/Pikselas/jellymilk/master";
+const ISMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('Mobile') !== -1);
+
 var containerPos = 100;
 
 function ToggleContainer()
 {
-    document.getElementById("ModelsContainer").style.top = (containerPos ^= 100) + "%";
+    document.getElementById("ModelsContainer").style.top = `calc(${containerPos ^= 100}% + 30px)`;
 }
 
 async function GetModels(modelType)
@@ -62,7 +64,7 @@ function CreateModelPanel(name)
     let title = document.createElement("h1");
     img.src = `${BaseURL}/profile_pics/${name}.png`;
 
-    panel.className = "Card";
+    panel.className = ISMobile? "Card Mobile" : "Card";
     circle1.className = "Circle";
     circle2.className = "Circle";
     imgcontainer.className = "ImgCont";
