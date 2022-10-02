@@ -62,7 +62,14 @@ function CreateModelPanel(name)
     let img = document.createElement("img");
     let titlecontainer = document.createElement("div");
     let title = document.createElement("h1");
-    img.src = `${BaseURL}/profile_pics/${name}.png`;
+    img.src = "./loadimg.gif";
+
+    let ProfileImg = new Image();
+    ProfileImg.src = `${BaseURL}/profile_pics/${name}.png`;
+    ProfileImg.onload = ()=>{
+        imgcontainer.removeChild(img);
+        imgcontainer.appendChild(ProfileImg);
+    }
 
     panel.className = ISMobile? "Card Mobile" : "Card";
     circle1.className = "Circle";
