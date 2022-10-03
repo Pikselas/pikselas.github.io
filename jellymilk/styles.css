@@ -202,12 +202,13 @@
 .modelDetails
 {
     position: fixed;
-    min-width: 400px;
+    top: calc(50% - 200px);
+    left: calc(50% - 175px);
+    width: 350px;
     height: 350px;
-    background: linear-gradient(#6b27a2 , aqua);
-    width: 50%;
+    background: linear-gradient(#26043ed6 , rgba(0, 0, 0, 0.91));
     border-radius: 10px;
-    border: 3px solid #ff00cb;
+    box-shadow: 0px 0px 10px black;
 }
 .modelDetails .CloseButtonContainer
 {
@@ -224,8 +225,8 @@
     font-family: sans-serif;
     font-weight: 500;
     font-size: large;
-    background-color: rgba(12, 12, 13, 0.22);
-    border: 1px solid rgba(255, 96, 239, 0.845);
+    background-color: rgba(0, 0, 0, 0);
+    /* border: 1px solid rgba(255, 96, 239, 0.845); */
     cursor: pointer;
 }
 .modelDetails .CloseButtonContainer button:hover
@@ -242,7 +243,7 @@
     font-size: large;
     font-family: monospace;
     overflow-y: scroll;
-    scrollbar-width: thin;
+    scrollbar-width: none;
 }
 
 .modelDetails .Container a

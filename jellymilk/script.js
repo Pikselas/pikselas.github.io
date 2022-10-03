@@ -43,7 +43,9 @@ function CreateDetailsPanel(desc , links)
     let lnk = document.createElement("a");
     lnk.href = link;
     lnk.target = "_blank";
-    lnk.innerHTML = link;
+    //get the base url of link
+    let baseurl = link.split("/")[2];
+    lnk.innerHTML = baseurl;
     container.appendChild(lnk);
     container.innerHTML += "<br/>";
 
@@ -100,8 +102,7 @@ function ShowModels(modelType)
                     res.json().then((details)=>{
                         let panel = CreateDetailsPanel(details["description"] , details["links"]);
                         document.body.appendChild(panel);
-                        panel.style.left = (document.body.offsetWidth / 2) - (panel.offsetWidth / 2) + "px";
-                        panel.style.top = "45px";
+                        // panel.style.left = (document.body.offsetWidth / 2) - (panel.offsetWidth / 2) + "px";
                     })
                 });
 
