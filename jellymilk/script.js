@@ -1,5 +1,6 @@
 
 const BaseURL = "https://raw.githubusercontent.com/Pikselas/jellymilk/master";
+const ModelListUrl = "https://api.github.com/repos/Pikselas/jellymilk/contents/profile_pics"
 const ISMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('Mobile') !== -1);
 
 var containerPos = 100;
@@ -108,6 +109,31 @@ function ShowModels(modelType)
 
             };
             Modcon.appendChild(modelPanel);            
+        });
+    });
+}
+
+function ShowAllModels()
+{
+    let Modcon = document.getElementById("ModelsContainer").children[1];
+    Modcon.innerHTML = "";
+    fetch(ModelListUrl).then((res)=>{
+        res.json().then((modelsRes)=>{
+
+            modelsRes.forEach((model)=>{
+                let modelPanel = CreateModelPanel(model.name.split(".")[0]);
+                modelPanel.onclick = ()=>{
+
+                    fetch(`${BaseURL}/data/models/${model.name.split(".")[0]}.json`).then((res)=>{
+                        res.json().then((details)=>{
+                            let panel = CreateDetailsPanel(details["description"] , details["links"]);
+                            document.body.appendChild(panel);
+                        });
+                    });
+                };
+                Modcon.appendChild(modelPanel);
+            });
+
         });
     });
 }
