@@ -11,14 +11,53 @@ body
     left: 0px;
     top: -70px;
     overflow: hidden;
-    background: linear-gradient(180deg, rgb(1, 1, 1), #56fff4 , rgb(255, 13, 247));
-    background-size: 200% 200%;
-    animation: backPanel 4s ease-in-out infinite;
+    background: linear-gradient(180deg, #56fff4 , rgb(255, 13, 247));
+    background-size: 0% 0%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    animation: backPanel 4s ease infinite;
 }
 
 @keyframes backPanel {
-    0%{background-position:0% 0%}
-    100%{background-position:100% 200%}
+    0%
+    {
+        background-position: 50% 50%;
+    }
+    20%
+    {
+        background-size: 20% 50%;
+       background-position: 0% 50%;
+    }
+    40%
+    {
+        background-size: 50% 100%;
+        background-position: 100% 100%;
+    }
+    60%
+    {
+        background-size: 100% 100%;
+        background-position: 100% 100%;
+    }
+    70%
+    {
+        background-size: 100% 50%;
+        background-position: 100% 100%;
+    }
+    80%
+    {
+        background-size: 100% 50%;
+        background-position: 50% 0%;
+    }
+    90%
+    {
+        background-size: 100% 50%;
+        background-position: 50% 50%;
+    }
+    100%
+    {
+        background-size: 0% 0%;
+        background-position: 50% 50%;
+    }
   }
 
 .Hex
@@ -33,7 +72,7 @@ body
 
 .Hex div:nth-child(1)
 {
-    border-bottom: 50px solid blueviolet;
+    border-bottom: 50px solid #0f0031;
     border-left: 60px solid transparent;
     border-right: 60px solid transparent;
 }
@@ -42,12 +81,12 @@ body
 {
     width: 120px;
     height: 60px;
-    background-color: blueviolet;
+    background-color: #0f0031;
 }
 
 .Hex div:nth-child(3)
 {
-    border-top: 50px solid blueviolet;
+    border-top: 50px solid #0f0031;
     border-left: 60px solid transparent;
     border-right: 60px solid transparent;
 }
@@ -62,7 +101,7 @@ body
 
 .HalfHexRightSided div:nth-child(1)
 {
-    border-bottom: 50px solid blueviolet;
+    border-bottom: 50px solid #0f0031;
     border-right: 60px solid transparent;
 }
 
@@ -70,12 +109,12 @@ body
 {
     width: 60px;
     height: 60px;
-    background-color: blueviolet;
+    background-color: #0f0031;
 }
 
 .HalfHexRightSided div:nth-child(3)
 {
-    border-top: 50px solid blueviolet;
+    border-top: 50px solid #0f0031;
     border-right: 60px solid transparent;
 }
 
@@ -88,7 +127,7 @@ body
 }
 .HalfHexLeftSided div:nth-child(1)
 {
-    border-bottom: 50px solid blueviolet;
+    border-bottom: 50px solid #0f0031;
     border-left: 60px solid transparent;
 }
 
@@ -96,12 +135,12 @@ body
 {
     width: 60px;
     height: 60px;
-    background-color: blueviolet;
+    background-color: #0f0031;
 }
 
 .HalfHexLeftSided div:nth-child(3)
 {
-    border-top: 50px solid blueviolet;
+    border-top: 50px solid #0f0031;
     border-left: 60px solid transparent;
 }
 
