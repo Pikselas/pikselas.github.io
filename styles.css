@@ -15,43 +15,44 @@ body
     background-size: 0% 0%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    animation: backPanel 4s ease infinite;
+    animation: backPanel 4s linear infinite;
 }
 
 @keyframes backPanel {
     0%
     {
+        background-size: 0% 0%;
         background-position: 50% 50%;
     }
     20%
     {
-        background-size: 20% 50%;
+       background-size: 50% 100%;
        background-position: 0% 50%;
     }
     40%
     {
         background-size: 50% 100%;
-        background-position: 100% 100%;
+        background-position: 100% 0%;
     }
     60%
     {
-        background-size: 100% 100%;
-        background-position: 100% 100%;
+        background-size: 100% 50%;
+        background-position: 100% 0%;
     }
     70%
     {
         background-size: 100% 50%;
-        background-position: 100% 100%;
+        background-position: 0% 100%;
     }
     80%
     {
-        background-size: 100% 50%;
-        background-position: 50% 0%;
+        background-size: 50% 100%;
+        background-position: 0% 100%;
     }
     90%
     {
-        background-size: 100% 50%;
-        background-position: 50% 50%;
+        background-size: 50% 100%;
+        background-position: 50% 100%;
     }
     100%
     {
