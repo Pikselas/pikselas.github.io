@@ -15,48 +15,29 @@ body
     background-size: 0% 0%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    animation: backPanel 4s linear infinite;
+    transition: all .9s ease-in;
+    /* animation: backPanel 4s linear infinite; */
 }
 
 @keyframes backPanel {
-    0%
+    0% 
     {
         background-size: 0% 0%;
         background-position: 50% 50%;
     }
-    20%
-    {
-       background-size: 50% 100%;
-       background-position: 0% 50%;
-    }
-    40%
+    20% 
     {
         background-size: 50% 100%;
-        background-position: 100% 0%;
+        background-position: 50% 50%;
     }
-    60%
+    40% 
+    {
+        background-size: 100% 100%;
+        background-position: 50% 50%;
+    }
+    60% 
     {
         background-size: 100% 50%;
-        background-position: 100% 0%;
-    }
-    70%
-    {
-        background-size: 100% 50%;
-        background-position: 0% 100%;
-    }
-    80%
-    {
-        background-size: 50% 100%;
-        background-position: 0% 100%;
-    }
-    90%
-    {
-        background-size: 50% 100%;
-        background-position: 50% 100%;
-    }
-    100%
-    {
-        background-size: 0% 0%;
         background-position: 50% 50%;
     }
   }
@@ -154,25 +135,6 @@ body
     position: absolute;
 }
 
-.Hex:hover
-{
-    transform: scale(1.2);
-    z-index : 10;
-}
-
-.Hex:hover div:nth-child(1)
-{
-    border-bottom-color: rgb(204, 35, 255);
-}
-.Hex:hover div:nth-child(2)
-{
-    background-color: rgb(204, 35, 255);
-}
-.Hex:hover div:nth-child(3)
-{
-    border-top-color: rgb(204, 35, 255);
-}
-
 .HexFlower
 {
     position: absolute;
@@ -185,6 +147,12 @@ body
     z-index: 20;
     cursor: pointer;
     transition: all .9s;
+}
+
+.HexFlower:hover + #BackgroundHexPanel
+{
+    background-size: 100% 100%;
+    background-position: 50% 50%;
 }
 
 .HexFlower .HexRowOdd:nth-child(1)
@@ -247,6 +215,25 @@ body
 .HexFlower:hover .Hex
 {
     transform: none;
+}
+
+#BackgroundHexPanel .Hex::before
+{
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -35px;
+    background: linear-gradient(180deg, #db66ff , rgb(0, 255, 204));
+    z-index: -1;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#BackgroundHexPanel .Hex:hover::before
+{
+    opacity: 1;
 }
 
 .HexCard

@@ -218,15 +218,19 @@ document.body.onload = ()=>{
 , 145);
     Panel.id = "BackgroundHexPanel";
 
-    document.body.appendChild(Panel);
-
     let Flower = CreateHexFlower();
+    Flower.id = "Flower";
+
+    document.body.appendChild(Flower);
+    document.body.appendChild(Panel);
 
     Flower.onclick = ()=>{
 
         let panel = document.getElementById("BackgroundHexPanel");
-        panel.style.background = "none";
-        ScaleHexPanelElem(document.getElementById("BackgroundHexPanel") , 0);
+        //panel.style.backgroundSize = "0%";
+        panel.style.backgroundSize = "0% 0%";
+        //panel.style.background = "none";
+        //ScaleHexPanelElem(document.getElementById("BackgroundHexPanel") , 0);
         Flower.style.opacity = "0";
         setTimeout(()=>{
             panel.parentElement.removeChild(panel);
@@ -242,6 +246,5 @@ document.body.onload = ()=>{
         });
 
     }
-    document.body.appendChild(Flower);
 
 }
