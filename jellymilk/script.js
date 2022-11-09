@@ -1,5 +1,6 @@
 
-const BaseURL = "https://raw.githubusercontent.com/Pikselas/jellymilk/master";
+//const BaseURL = "https://raw.githubusercontent.com/Pikselas/jellymilk/master";
+const BaseURL = "https://gitcdn.link/cdn/Pikselas/jellymilk/master";
 const ModelListUrl = "https://api.github.com/repos/Pikselas/jellymilk/contents/profile_pics"
 const ISMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('Mobile') !== -1);
 
