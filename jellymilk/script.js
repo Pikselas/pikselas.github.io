@@ -147,7 +147,19 @@ document.body.onload = ()=>{
             section.className = "Section Mobile";
         });
     }
+}
 
+document.getElementById("TypesButton").onclick = ()=>{
+    let panel = document.createElement("div");
+    panel.className = "Types";
+    let Close = document.createElement("button");
+    Close.innerHTML = "X";
+    panel.appendChild(Close);
+    Close.onclick = ()=>{panel.remove()};
+    let area = document.createElement("div");
+    area.className = "TypesContainer";
+    panel.appendChild(area);
+    document.body.appendChild(panel);
     fetch(BaseURL + "/data/categories.json").then((res)=>{
         res.json().then((data)=>{
             data["categories"].forEach((category)=>{
@@ -163,8 +175,31 @@ document.body.onload = ()=>{
                     ToggleContainer();
                     ShowModels(category);
                 }
-                document.getElementById("TypesContainer").appendChild(button);
+                area.appendChild(button);
             })
         });
     });
+}
+
+document.getElementById("ShuffleButton").onclick = ()=>{
+    let Modcon = document.getElementById("ModelsContainer").children[1];
+    Modcon.innerHTML = "";
+    fetch(ModelListUrl).then((res)=>{
+        res.json().then((modelsRes)=>{
+            let model = modelsRes[Math.floor(Math.random() * modelsRes.length)];
+            let modelPanel = CreateModelPanel(model.name.split(".")[0]);
+            modelPanel.onclick = ()=>{
+
+                fetch(`${BaseURL}/data/models/${model.name.split(".")[0]}.json`).then((res)=>{
+                    res.json().then((details)=>{
+                        let panel = CreateDetailsPanel(details["description"] , details["links"]);
+                        document.body.appendChild(panel);
+                    });
+                });
+
+            };
+            Modcon.appendChild(modelPanel);
+        });
+    });   
+    ToggleContainer();
 }

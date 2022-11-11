@@ -10,19 +10,16 @@
 <body>
     <div class="Banner">
         <div>Jellymilk</div>
-        <div onclick="ShowAllModels();ToggleContainer()">All</div>
-        <div>Log</div>
     </div>
     <div class="Browse">
         <div class="Section Desktop">
-            <img src="./label.png">
+            <img id="TypesButton" src="./label.png">
         </div><div class="Section Desktop">
-            <img src="./shuffle.png">
+            <img id="ShuffleButton" src="./shuffle.png">
         </div><div class="Section Desktop">
-            <img src="./woman.png">
+            <img onclick="ShowAllModels();ToggleContainer()" src="./woman.png">
         </div>
     </div>
-    <div id="TypesContainer"></div>
     <div id="ModelsContainer">
         <div class="CloseButtonContainer">
             <button onclick = "ToggleContainer()">X</button>
