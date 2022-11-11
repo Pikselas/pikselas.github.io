@@ -18,6 +18,7 @@
     left: 0%;
     background: linear-gradient(90deg, rgb(31, 0, 50), rgb(7, 0, 61));
     background-size: 200% 100%;
+    z-index: 1;
 }
 .Banner div
 {
@@ -64,13 +65,72 @@
     background: linear-gradient(rgb(0, 0, 64),rgb(106, 0, 171));
 }
 
+.Browse
+{
+    width: 100%;
+    height: calc(100% - 30px);
+    position: absolute;
+    top: 30px;
+    left: 0%;
+}
+
+.Browse .Section
+{
+    background-size: cover;
+    background-position: center;
+}
+
+.Browse .Section:nth-child(1)
+{
+    background-image: url("./street.jpg");
+}
+
+.Browse .Section:nth-child(2)
+{
+    background-image: url("./street2.jpg");
+}
+
+.Browse .Section:nth-child(3)
+{
+    background-image: url("./street3.jpg");
+}
+
+.Browse .Section
+{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Browse .Section.Desktop
+{
+    width: 33.3%;
+    height: 100%;
+}
+
+.Browse .Section.Mobile
+{
+    width: 100%;
+    height: 33.3%;
+}
+
+.Browse .Section img
+{
+    width: max-content;
+    height: max-content;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 5px;
+}
+
 #TypesContainer
 {
     position: absolute;
-    width: 70%;
-    height: 85%;
-    top: 10%;
-    left: 15%;
+    width: 100%;
+    height: 40px;
+    bottom: 10px;
+    left: 0%;
     overflow-y: scroll;
     scrollbar-width: none;
     text-align: center;
@@ -97,6 +157,40 @@
     color: rgba(255, 255, 255, 0.81);
     box-shadow: 0px 0px 5px rgb(153, 0, 255);
 }
+
+.CategoryButton
+{
+    width: max-content;
+    height: 33px;
+    /* background: linear-gradient(90deg,#020003 , #4200a2); */
+    border:2px solid #4e0083;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.CategoryButton img
+{
+    padding: 5px;
+}
+
+.CategoryButton span
+{
+    position: relative;
+    top: -12px;
+    left: -4px;
+    color: rgb(236, 239, 255);
+    font-size: large;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.CategoryButton:hover
+{
+    background: linear-gradient(90deg,#f427d4 , #297fa1);
+}
+
 #ModelsContainer
 {
     transition: all .5s;

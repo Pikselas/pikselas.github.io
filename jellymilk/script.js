@@ -1,6 +1,6 @@
 
-//const BaseURL = "https://raw.githubusercontent.com/Pikselas/jellymilk/master";
-const BaseURL = "https://gitcdn.link/cdn/Pikselas/jellymilk/master";
+const BaseURL = "https://raw.githubusercontent.com/Pikselas/jellymilk/master";
+//const BaseURL = "https://gitcdn.link/cdn/Pikselas/jellymilk/master";
 const ModelListUrl = "https://api.github.com/repos/Pikselas/jellymilk/contents/profile_pics"
 const ISMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('Mobile') !== -1);
 
@@ -141,11 +141,24 @@ function ShowAllModels()
 
 document.body.onload = ()=>{
 
+    if(ISMobile)
+    {
+        document.querySelectorAll(".Section").forEach((section)=>{
+            section.className = "Section Mobile";
+        });
+    }
+
     fetch(BaseURL + "/data/categories.json").then((res)=>{
         res.json().then((data)=>{
             data["categories"].forEach((category)=>{
-                let button = document.createElement("button");
-                button.innerHTML = category;
+                let button = document.createElement("div");
+                let text = document.createElement("span");
+                let icon = document.createElement("img");
+                button.className = "CategoryButton";
+                icon.src = "./tag.png";
+                text.innerHTML = category;
+                button.appendChild(icon);
+                button.appendChild(text);
                 button.onclick = ()=>{
                     ToggleContainer();
                     ShowModels(category);
